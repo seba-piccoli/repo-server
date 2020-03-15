@@ -2,7 +2,7 @@
 <check
 		title="Model Errors"
       	modelfile="model.rich"
-      	modelbasepath="//error"
+      	modelbasepath="//error[stage/@value='analysis']"
       	modelnamepath="@type"
       	modelvaluepath="for $current in . return concat(//element[@id=$current/@element]/@name,' ',@name)"
         modelerrorid="$error/object/error/@errorID"
