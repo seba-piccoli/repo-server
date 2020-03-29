@@ -35,7 +35,7 @@
    <folder name="1. api" id="bf01de3b-3a99-45a3-afbf-26573437ab38">
       <folder name="Read an element" id="81b48faf-e1c3-46fd-ad8c-b7612324cfc4">
          <element xsi:type="zenta:ZentaDiagramModel"
-                  name="Read an element"
+                  name="ReadElementController"
                   id="d8022c7f-446b-41e9-b6b9-586c3a4de9c7"
                   connectionRouterType="1">
             <child xsi:type="zenta:DiagramObject"
@@ -202,7 +202,7 @@
       </folder>
       <folder name="Modify an element" id="a755ac8b-5b01-4a6f-984e-f8180733423a">
          <element xsi:type="zenta:ZentaDiagramModel"
-                  name="Modify an element"
+                  name="ModifyElementController"
                   id="0f1f6f50-04b4-4a94-88cb-c41ac1a9fe6e">
             <child xsi:type="zenta:DiagramObject"
                    id="4ae0f679-ff7e-403a-9893-13ac4a69d263"
