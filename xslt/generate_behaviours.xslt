@@ -96,10 +96,13 @@ The production code is at <xsl:value-of select="concat(@package, '.', @service)"
 The testcase base should be at <xsl:value-of select="concat(@package, '.', @service)" />TestBase.java
 The testcase should probably be at <xsl:value-of select="concat(@package, '.', @service)" /><xsl:value-of select="zenta:camelCase(@behaviour)"/>Test.java
 
+<xsl:value-of select="current()/behaviour//documentation"/>
   <xsl:variable name="serviceview" select="$zenta//element[@id=current()/service/element/@id]/../*[.//child[@zentaElement=current()/service/element/@id]]"/>
   <xsl:variable name="dataobjects" select="$rich//element[@id=$serviceview//@zentaElement and (@xsi:type='DTO' or @xsi:type='Entity')]"/>
+
 The service:
-                <xsl:copy-of select="zenta:drawpic(@id)"/>
+	
+	<xsl:copy-of select="zenta:drawpic($serviceview/@id)"/>
 DTOs and Entities:
 	<xsl:for-each select="$dataobjects">
         <xsl:variable name="view" select="../*[.//@zentaElement=current()/@id]"/>
