@@ -1407,7 +1407,7 @@ ModifyElementController first looks up the deleted and modified elements using L
 If any of them missing, LookupDeletedAndModifiedElementsService throws a ConstraintException.
 After, it
 * creates a new tag with a random name starting with "_stage_".
-* creates the changed or modified elements, the mementos for deleted elements, the missing remote not on server tags referenced, and make the new tag to tag the commit in the modification
+* creates the elements as described in the element modifications behaviour
 * calls ConsistencyCheckService with the modification
 * deletes the stage tag
 </documentation>
@@ -1477,6 +1477,16 @@ https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframe
          <documentation>Reference fields must point to existing elements which will be available after the operation in the repository, or in an external repository.
 Elements should either be a memento, or fully defined.
 
+It is an error to have more than one commit in the modification
+
+the commit of the created elements (except tags) is the current commit. if there is no commit in the modification, one is created with a random name/id
+
+if any of the elements does not have a commit associated, the necessary relationship is created
+
+the commit of all of the elements are fixed in the DTO if needed before passed on to CreateElementService
+
+any elements created and not in the modification are added to the modification
+
 References are checked by CheckReferenceService
 
 Local references and remote references using a repository available in the server are checked for the existence of the element referred to.
@@ -1504,7 +1514,10 @@ See the "data model" objective for details.
                ancestor="behaviour">
          <documentation>elements are created/updated/deleted in the persistence layer (if all of the check pass for the state after the modification)
 
-</documentation>
+
+creates the changed or modified elements, the mementos for deleted elements, the missing remote not on server tags referenced, and make the new tag to tag the commit in the modification
+
+The first element to create is the commit, then any tags, the mementos, the non-relationship elements, then the relationships</documentation>
       </element>
       <element xsi:type="zenta:BasicObject"
                name="Element presentation"
