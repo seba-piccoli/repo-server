@@ -1245,6 +1245,11 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                 targetConnections="82e61b1b-4962-4bc0-b763-5084b51dd612"
                 zentaElement="9eed8a46-50c5-4721-8250-6b32816b40b8">
             <bounds x="1110" y="235" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="d6c19f4b-4bb4-462b-86cf-18a31bb78578"
+                              source="25dd2b3f-257b-41d1-957a-5af1ca94085f"
+                              target="e7439bfa-2017-434a-b21e-4645d7c06c99"
+                              relationship="abfbbe4d-d923-48dc-85ab-3e554fa2a77f"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="4c040574-8d5c-437c-b2ea-1129405f186f"
