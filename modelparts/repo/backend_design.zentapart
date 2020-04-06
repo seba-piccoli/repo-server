@@ -2999,7 +2999,7 @@ If the element is not found, a null is returned.
                name="api"
                id="223dc972-265a-474a-bdf5-fae3bd404cee"
                ancestor="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
-      <element xsi:type="zenta:Folder"
+      <folder
                name="Check reference"
                id="34e9f210-1452-46de-8580-c234164d455c">
          <element xsi:type="zenta:BasicRelationship"
@@ -3024,21 +3024,6 @@ If the element is not found, a null is returned.
                   name="reference"
                   id="34cbcf02-ef3e-4b34-ac8c-c13eacf639a3"
                   ancestor="7a959e3d-31b1-491f-82dc-57838b15ce59"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="e1c3f48a-c6d8-4cff-9ff1-eecb094ea9e8"
-                  ancestor="a99c1f63-c4f6-4d0a-b9e8-5bf3aa5284a2"
-                  source="7ed881e1-fe47-453d-8a1e-01496ca89b08"
-                  target="3dce4b19-3a50-4259-b22c-0e09d9a599b6"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="cf2d8013-2364-4114-9aaf-ee42524e3a77"
-                  ancestor="7a26a9a0-0603-4f53-93d2-f09fd0519e2b"
-                  source="3dce4b19-3a50-4259-b22c-0e09d9a599b6"
-                  target="b0b9e3d0-389f-4989-941a-e97aeb77bdbc"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="c8f1edd3-0b78-4b2a-89d3-349064eab1e3"
-                  ancestor="e3ad9158-0def-47d6-a531-196ad3733004"
-                  source="3dce4b19-3a50-4259-b22c-0e09d9a599b6"
-                  target="9a2b212a-eb5e-432a-92f0-6483594b6895"/>
          <element xsi:type="zenta:BasicObject"
                   name="CheckReferenceResultEnum"
                   id="8befe592-ac3c-4bc5-b0d0-998cf44d1c6d"
@@ -3056,14 +3041,10 @@ If the element is not found, a null is returned.
                   ancestor="7bbba479-c1ed-445b-915d-25d3eb478b1f"
                   source="34cbcf02-ef3e-4b34-ac8c-c13eacf639a3"
                   target="07eeac90-e494-4d90-b4b6-54480568cd24"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="154291f1-7623-42d8-8562-0bfac2f740e6"
-                  ancestor="7bbba479-c1ed-445b-915d-25d3eb478b1f"
-                  source="3dce4b19-3a50-4259-b22c-0e09d9a599b6"
-                  target="21c7cbd9-6237-46f3-b430-12f2562254e1"/>
          <element xsi:type="zenta:ZentaDiagramModel"
                   name="CheckReferenceService"
-                  id="2855e9d6-a087-4194-a5f2-12e6c9b91667">
+                  id="2855e9d6-a087-4194-a5f2-12e6c9b91667"
+                  connectionRouterType="1">
             <child xsi:type="zenta:DiagramObject"
                    id="98549aa7-b0f7-4d1b-b986-d70a5533e636"
                    targetConnections="04c3139d-fd13-4a73-8ef6-1088fb5c7b5a"
@@ -3157,7 +3138,7 @@ If the element is not found, a null is returned.
                   ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
                   source="f6e03b4e-efb0-4121-b61f-08383c417794"
                   target="2927882b-3bb6-4137-8deb-4d5d26d9fb6e"/>
-      </element>
+      </folder>
    </folder>
    <folder name="0. framework" id="e807d353-b963-412f-aec0-82734f5d97b3">
       <element xsi:type="zenta:BasicObject"
