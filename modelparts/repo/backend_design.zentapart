@@ -2955,7 +2955,7 @@ See Version management metamodel for the description of the version metamodel</d
                          id="dfa36f73-f4ad-45b9-bfbc-358f4d350be3"
                          targetConnections="7f5ee982-2ffb-4b7b-a8a8-7ba017bd4780"
                          zentaElement="3b92647b-c7c1-4569-8f09-89605bc16d1e">
-                     <bounds x="129" y="526" width="-1" height="-1"/>
+                     <bounds x="142" y="528" width="-1" height="-1"/>
                   </child>
                   <child xsi:type="zenta:DiagramObject"
                          id="be99479d-1b7c-4f63-8c6a-565ae803d1ac"
