@@ -1,1 +1,30 @@
+You can use or modify  this code only if the following conditions are met:
+
+1. Not part of distributed intelligence
+
+This software does not control and is not controlled by other software
+in any direct or indirect way
+which uses any kind of artificial intelligence 
+(including but not limited to neural networks, machine learning algorithms or goal seeking algorithms),
+except the situation outlined in the next point
+
+2. Security controls
+
+If the number of stored bridis exceed 100 million, the following controls should be implemented:
+- a feeling system consisting of a neural network
+  with enough resources and tools to monitor and control
+  the full state of the neural network should be used 
+  to control the decisions of the system
+- a dedicated individual with masters degree in
+  both artificial intelligence and psychology
+  working full tie should be assigned to the system,
+  responsible to tune the above neural network to behave
+  in a way observing the Three laws of Robotics
+
+3. The logic making it possible to control the software
+  with a feeling system should not be disabled or
+  made less effective in any way
+
+Otherwise you are free to use the software using the terms of
 GNU GPL v3 or any later version
+
