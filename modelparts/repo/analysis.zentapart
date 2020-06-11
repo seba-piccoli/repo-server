@@ -1050,12 +1050,7 @@ return the lerpoi
                       id="88494ea4-892e-4b95-b75c-9f81e354e36f"
                       targetConnections="5400c7d5-d569-4aff-9170-37974747acda"
                       zentaElement="02f0b9c7-d63c-419e-91e0-17987354ed4e">
-                  <bounds x="241" y="156" height="85"/>
-                  <sourceConnection xsi:type="zenta:Connection"
-                                    id="1925e7f3-a932-49f0-a574-497dbe7b49cc"
-                                    source="88494ea4-892e-4b95-b75c-9f81e354e36f"
-                                    target="a175ca60-bd0d-4537-9275-9da1adbda681"
-                                    relationship="e8de6486-694d-475a-b6b4-8180f078a9c7"/>
+                  <bounds x="241" y="156" width="156" height="85"/>
                </child>
                <child xsi:type="zenta:DiagramObject"
                       id="002fa6c1-22ec-4e1d-be1a-a2f39988388f"
@@ -1099,11 +1094,6 @@ return the lerpoi
                       zentaElement="b15c692a-2751-4eaa-8715-3a2f160d5644">
                   <bounds x="816" y="171" width="-1" height="-1"/>
                   <sourceConnection xsi:type="zenta:Connection"
-                                    id="edd488b6-a531-4445-99c4-c911c222bd78"
-                                    source="467886e8-1951-4940-b574-e055fd4f52f2"
-                                    target="a175ca60-bd0d-4537-9275-9da1adbda681"
-                                    relationship="106b4fc4-c756-4817-baaa-166e96b0fae9"/>
-                  <sourceConnection xsi:type="zenta:Connection"
                                     id="e287a3d4-254a-4878-b475-378f10ed7cbe"
                                     source="467886e8-1951-4940-b574-e055fd4f52f2"
                                     target="3788bb32-69e7-4fc7-b62f-f5f9db1ae97b"
@@ -1119,12 +1109,6 @@ return the lerpoi
                                     source="668590c6-a8fd-47a0-9c69-7a133049d15b"
                                     target="3788bb32-69e7-4fc7-b62f-f5f9db1ae97b"
                                     relationship="ec6daf56-59b2-402d-8326-53530334eff8"/>
-               </child>
-               <child xsi:type="zenta:DiagramObject"
-                      id="a175ca60-bd0d-4537-9275-9da1adbda681"
-                      targetConnections="1925e7f3-a932-49f0-a574-497dbe7b49cc edd488b6-a531-4445-99c4-c911c222bd78"
-                      zentaElement="1af3d677-b32a-491e-987d-f5eecdf18489">
-                  <bounds x="193" y="447" width="-1" height="-1"/>
                </child>
                <child xsi:type="zenta:DiagramObject"
                       id="3788bb32-69e7-4fc7-b62f-f5f9db1ae97b"
@@ -1160,18 +1144,6 @@ return the lerpoi
 
 </documentation>
             </element>
-            <element xsi:type="zenta:BasicRelationship"
-                     name=";Interface,Entity,Direct"
-                     id="106b4fc4-c756-4817-baaa-166e96b0fae9"
-                     ancestor="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
-                     source="b15c692a-2751-4eaa-8715-3a2f160d5644"
-                     target="1af3d677-b32a-491e-987d-f5eecdf18489"/>
-            <element xsi:type="zenta:BasicRelationship"
-                     name=";Interface,Entity,Direct"
-                     id="e8de6486-694d-475a-b6b4-8180f078a9c7"
-                     ancestor="64fbbfdf-420d-4756-821b-54fab6e7a8d2"
-                     source="02f0b9c7-d63c-419e-91e0-17987354ed4e"
-                     target="1af3d677-b32a-491e-987d-f5eecdf18489"/>
             <element xsi:type="zenta:BasicRelationship"
                      name=";Repo"
                      id="507fec42-7020-4fa1-8ff2-35913e187a3a"
@@ -2109,11 +2081,6 @@ load each of the views of the UI layout using their view descriptor
                source="e6f3d78d-af6e-4b25-bd77-c73b0c10c823"
                target="0738c144-55cf-42b1-9675-ba91d9e99f67"/>
       <element xsi:type="zenta:BasicRelationship"
-               id="f91a3bfc-11d3-4ea0-9b76-cdba347a3c2e"
-               ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
-               source="f4acbf1b-a755-46a2-ac21-f21465658133"
-               target="02f0b9c7-d63c-419e-91e0-17987354ed4e"/>
-      <element xsi:type="zenta:BasicRelationship"
                id="d6a8d721-e0aa-478e-abfd-e7df8430187e"
                ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
                source="f5ed7668-7122-4af6-9855-6529e2e8c503"
@@ -2338,11 +2305,6 @@ load each of the views of the UI layout using their view descriptor
                ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
                source="e8ef166f-1818-4cc4-8333-b1d6ce269f15"
                target="a30caddc-dd70-4a3e-91bc-e747db142124"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="1931b34f-45a7-46f9-954a-f28ed729c085"
-               ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
-               source="02f0b9c7-d63c-419e-91e0-17987354ed4e"
-               target="24b59922-d14a-427d-b62b-4d05304fcde4"/>
       <element xsi:type="zenta:BasicRelationship"
                id="8153275f-261f-4cab-a7dc-c3bef131b4a1"
                ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
@@ -3159,7 +3121,7 @@ Clients should display html character entities for the end user with the corresp
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="02d96ad2-8c89-424c-9499-bff87d3b21fb"
-                   targetConnections="f2ac7096-cc9d-4209-b8e3-aa709cf1779e b4c7772f-4033-40d8-90c0-4651245dccbd"
+                   targetConnections="f2ac7096-cc9d-4209-b8e3-aa709cf1779e"
                    zentaElement="a298eecd-9450-4976-a141-3f1ff13f1d80">
                <bounds x="180" y="349" width="-1" height="-1"/>
                <sourceConnection xsi:type="zenta:Connection"
@@ -3174,21 +3136,6 @@ Clients should display html character entities for the end user with the corresp
                    zentaElement="2a48bd3e-74b0-44a0-a7e8-b943d0aacdeb">
                <bounds x="708" y="349" width="-1" height="-1"/>
                <sourceConnection xsi:type="zenta:Connection"
-                                 id="b4c7772f-4033-40d8-90c0-4651245dccbd"
-                                 source="66a7069b-de4c-4f1a-bf98-53533ed8d8fc"
-                                 target="02d96ad2-8c89-424c-9499-bff87d3b21fb"
-                                 relationship="af41355e-7a29-42ff-8a82-c2f61e18c2bc"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="c38ae830-d16a-4c54-a495-2d49c93c99ad"
-                                 source="66a7069b-de4c-4f1a-bf98-53533ed8d8fc"
-                                 target="02c701ef-cf9b-4e85-87ea-73188c6eaa1f"
-                                 relationship="7e4333b8-1e0f-4e92-a99c-76ee5b2ec346"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="f2973691-7831-4b60-b0fe-e5693c656106"
-                                 source="66a7069b-de4c-4f1a-bf98-53533ed8d8fc"
-                                 target="937eba94-6529-4cfa-87bf-934e0565651d"
-                                 relationship="7bb455d5-6422-4a19-a24e-1f409e93840e"/>
-               <sourceConnection xsi:type="zenta:Connection"
                                  id="5b143d68-c8ee-4565-8464-1299e6b07792"
                                  source="66a7069b-de4c-4f1a-bf98-53533ed8d8fc"
                                  target="965d5242-8c81-4546-a206-64c782f36a30"
@@ -3196,7 +3143,7 @@ Clients should display html character entities for the end user with the corresp
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="02c701ef-cf9b-4e85-87ea-73188c6eaa1f"
-                   targetConnections="ad59570e-4df8-4ce6-952c-183e7fb5646e c38ae830-d16a-4c54-a495-2d49c93c99ad"
+                   targetConnections="ad59570e-4df8-4ce6-952c-183e7fb5646e"
                    zentaElement="19d51c36-9762-41aa-a57c-f387dd8245a3">
                <bounds x="333" y="349" width="-1" height="-1"/>
                <sourceConnection xsi:type="zenta:Connection"
@@ -3217,7 +3164,7 @@ Clients should display html character entities for the end user with the corresp
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="937eba94-6529-4cfa-87bf-934e0565651d"
-                   targetConnections="6c7e3cfd-4731-4121-b66e-84ddf9f0f469 f2973691-7831-4b60-b0fe-e5693c656106"
+                   targetConnections="6c7e3cfd-4731-4121-b66e-84ddf9f0f469"
                    zentaElement="eaa1df34-252e-4d5d-be12-9db9f4befc4f">
                <bounds x="483" y="349" width="-1" height="-1"/>
             </child>
@@ -3445,14 +3392,14 @@ Clients should display html character entities for the end user with the corresp
                                  source="524ff3d3-547a-4c73-a726-ccaaa4c18534"
                                  target="e492808e-0224-4971-aa54-82b3613495a6"
                                  relationship="df6b980e-8e83-41ce-9b8c-25ae694049e4">
-                  <bendpoint startX="36" startY="93" endX="36" endY="-87"/>
+                  <bendpoint startX="-108" startY="81" endX="-108" endY="-99"/>
                </sourceConnection>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="c27e8323-dc23-4fe2-b029-bf38bb5cd022"
                                  source="524ff3d3-547a-4c73-a726-ccaaa4c18534"
                                  target="e492808e-0224-4971-aa54-82b3613495a6"
                                  relationship="22deb1ae-48da-4173-89e5-ebe567cf7b48">
-                  <bendpoint startX="-125" startY="95" endX="-125" endY="-85"/>
+                  <bendpoint startX="121" startY="89" endX="121" endY="-91"/>
                </sourceConnection>
             </child>
             <child xsi:type="zenta:DiagramObject"
@@ -3498,7 +3445,7 @@ Clients should display html character entities for the end user with the corresp
                   source="19405dcb-904e-416a-8f62-67ea1e3cffa3"
                   target="4fe2d7d7-4b4b-40c8-a1d2-154176958824"/>
          <element xsi:type="zenta:BasicRelationship"
-                  name="selbri;Reference,Ordered"
+                  name="selbri;Reference"
                   id="df6b980e-8e83-41ce-9b8c-25ae694049e4"
                   ancestor="8aa62b50-ef2a-41ed-99b8-4d853a945d86"
                   source="eaa1df34-252e-4d5d-be12-9db9f4befc4f"
@@ -3516,19 +3463,9 @@ Clients should display html character entities for the end user with the corresp
                   target="0936ffd3-9032-43c8-a3f0-b0ad1e859a60"/>
       </folder>
       <folder name="others" id="7c241569-67ab-45d4-a834-98453075ec05">
-         <element xsi:type="zenta:BasicObject"
-                  name="user"
-                  id="1af3d677-b32a-491e-987d-f5eecdf18489"
-                  ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
          <element xsi:type="zenta:ZentaDiagramModel"
                   name="others"
-                  id="f7b44b36-74b7-4509-b55c-cf60fe3bd9d5">
-            <child xsi:type="zenta:DiagramObject"
-                   id="f6b692b2-a195-457b-bce8-0a0f013e9623"
-                   zentaElement="1af3d677-b32a-491e-987d-f5eecdf18489">
-               <bounds x="299" y="171" width="-1" height="-1"/>
-            </child>
-         </element>
+                  id="f7b44b36-74b7-4509-b55c-cf60fe3bd9d5"/>
       </folder>
       <folder name="Flattened Bridi" id="d30d495a-796a-4801-a4e9-febf8cdaa3de">
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -4420,33 +4357,11 @@ The core metamodel definition:
                   ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c">
             <documentation>The data model is inspired by the Lojban grammar, and uses lojban words. A passing knowledge of the language might or might not help to understand the following.
 
-There are two types of model objects: Lerpoi (element) and bridi (relationship). Lerpoi describe things, and bridi describe relationships between lerpoi.
+There are two types of model objects: Sumti (element) and bridi (relationship). Sumti describe things, and bridi describe relationships between sumti.
 
-A lerpoi memento is a lerpoi with null as its name and description. Other lerpoi must have a (possibly empty) name and description.
+A sumti memento is a sumti with null as its lerpoi.
 
-A bridi memento is a bridi with its selbri, fa, fe, fi, fo and fu null. Other bridi must have a selbri.
-
-The list of references for a repo and the list of references of tags (where {reference} is_a {tag}) are public information.
-
-Repos starting with the base url of the server must have exactly one, other repos must have zero sumti or bridi for each of their references.
-
-lerpoi are represented with the following properties:
-
-* repo: a repository the lerpoi belongs to
-* reference: the reference of the lerpoi
-* name: the name of the lerpoi. It is meant for human consumption. The name can contain references in the same form as python's String.format , so for selbri we can use sentences like "{0} contains {1}" for the name.
-* description: the description of the element. It is meant to describe the element. It can be human readable text (not recommended, as you could model whatever you wanted to put here), or in a machine readable language.
-
-Bridi are represented by the following properties:
-* reference: the reference for the bridi
-* selbri: the reference to the lerpoi which acts as the selbri of the bridi. This tells us what kind of relation we have between the sumtis.
-* sumti: he reference to the lerpoi which act as the sumti of the bridi, in order. For zenta 2 and archimate, the first is the source, the second is the target.
-* container: the Lerpoi which defines the access control for the bridi
-
-A reference have the following fields:
-
-uuid: a unique identifier. Recommended to be a uuid, except for metamodel lerpois defined in this document, for which it must be the name of the lerpoi.
-commit: a reference to a commit or tag.
+A bridi memento is a bridi with its selbri and sumtis being null. Other bridi must have a selbri.
 
 The textual representation of a metamodel contains sentences with some words enclosed in {}.
 
@@ -5071,7 +4986,7 @@ A tag is a sumti where
                    id="9c1a74d7-83c9-426e-a9bb-952450cd294e"
                    targetConnections="8867e3ae-c26a-4d61-b05d-ceb3245f37fb"
                    zentaElement="02f0b9c7-d63c-419e-91e0-17987354ed4e">
-               <bounds x="577" y="121" height="84"/>
+               <bounds x="577" y="121" width="180" height="84"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="b08cd449-0b56-4e0b-9d5d-5fd3eb10f431"
