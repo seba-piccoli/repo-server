@@ -1,6 +1,7 @@
 package com.kodekonveyor.repo.api;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -93,6 +94,30 @@ public class ReadSumtiControllerElementLookupTest
     );
 
     assertEquals(SumtiDTOTestData.list(), sumtiDTO);
+
+  }
+
+  @Test
+  @DisplayName(
+    "When parameters are wrong list is empty"
+  )
+  public void test5() {
+
+    Mockito
+        .when(
+            sumtiEntityRepository
+                .findByLerpoiNameAndTag(
+                    SumtiEntityTestData.WRONG_NAME, SumtiEntityTestData.TAG
+                )
+        )
+        .thenReturn(SumtiEntityTestData.getEmptyList());
+
+    final SumtiListDTO sumtiDTO = readSumtiController.call(
+        SumtiEntityTestData.WRONG_NAME, SumtiEntityTestData.TAG,
+        SumtiEntityTestData.ID
+    );
+
+    assertTrue(sumtiDTO.getSumtiDTOList().isEmpty());
 
   }
 

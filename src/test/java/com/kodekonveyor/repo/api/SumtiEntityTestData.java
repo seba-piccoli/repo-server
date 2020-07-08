@@ -1,5 +1,6 @@
 package com.kodekonveyor.repo.api;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SumtiEntityTestData {
@@ -10,8 +11,15 @@ public class SumtiEntityTestData {
   public static final Long ID = 14L;
   public static final String NAME = "repo-server";
   public static final String TAG = "master";
+  public static final String WRONG_NAME = "repo-server-bad";
 
-  public static List<SumtiEntity> list() {
+  public static final List<SumtiEntity> getEmptyList() {
+
+    return new ArrayList<SumtiEntity>();
+
+  }
+
+  public static final List<SumtiEntity> list() {
 
     final SumtiEntity sumtiEntity = new SumtiEntity();
     sumtiEntity.setId(ID);
