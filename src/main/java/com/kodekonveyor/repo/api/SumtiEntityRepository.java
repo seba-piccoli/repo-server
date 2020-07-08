@@ -9,4 +9,6 @@ public interface SumtiEntityRepository
 
   List<SumtiEntity> findByLerpoiName(String name);
 
+  List<SumtiEntity> findByLerpoiNameAndTag(String name, String tag);
+
 }

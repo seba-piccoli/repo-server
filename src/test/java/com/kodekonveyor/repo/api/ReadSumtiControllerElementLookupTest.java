@@ -1,5 +1,7 @@
 package com.kodekonveyor.repo.api;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -23,11 +25,74 @@ public class ReadSumtiControllerElementLookupTest
 
   @Test
   @DisplayName("Looks up the repository by name")
-  public void testLookUpRepositoryByName() {
+  public void test1() {
 
-    readSumtiController.call(SumtiEntityTestData.NAME, SumtiEntityTestData.TAG, SumtiEntityTestData.ID);
+    readSumtiController.call(
+        SumtiEntityTestData.NAME, null,
+        SumtiEntityTestData.ID
+    );
 
-    Mockito.verify(sumtiEntityRepository).findByLerpoiName(SumtiEntityTestData.NAME);
+    Mockito.verify(sumtiEntityRepository)
+        .findByLerpoiName(SumtiEntityTestData.NAME);
+
+  }
+
+  @Test
+  @DisplayName(
+    "Looks up the repository by name and checks the sumti is correct"
+  )
+  public void test2() {
+
+    Mockito
+        .when(sumtiEntityRepository.findByLerpoiName(SumtiEntityTestData.NAME))
+        .thenReturn(SumtiEntityTestData.list());
+
+    final SumtiListDTO sumtiDTO = readSumtiController.call(
+        SumtiEntityTestData.NAME, null,
+        SumtiEntityTestData.ID
+    );
+
+    assertEquals(SumtiDTOTestData.list(), sumtiDTO);
+
+  }
+
+  @Test
+  @DisplayName("Looks up the repository by name and tag")
+  public void test3() {
+
+    readSumtiController.call(
+        SumtiEntityTestData.NAME, SumtiEntityTestData.TAG,
+        SumtiEntityTestData.ID
+    );
+
+    Mockito.verify(sumtiEntityRepository)
+        .findByLerpoiNameAndTag(
+            SumtiEntityTestData.NAME, SumtiEntityTestData.TAG
+        );
+
+  }
+
+  @Test
+  @DisplayName(
+    "Looks up the repository by name and tag and checks the sumti is correct"
+  )
+  public void test4() {
+
+    Mockito
+        .when(
+            sumtiEntityRepository
+                .findByLerpoiNameAndTag(
+                    SumtiEntityTestData.NAME, SumtiEntityTestData.TAG
+                )
+        )
+        .thenReturn(SumtiEntityTestData.list());
+
+    final SumtiListDTO sumtiDTO = readSumtiController.call(
+        SumtiEntityTestData.NAME, SumtiEntityTestData.TAG,
+        SumtiEntityTestData.ID
+    );
+
+    assertEquals(SumtiDTOTestData.list(), sumtiDTO);
 
   }
 

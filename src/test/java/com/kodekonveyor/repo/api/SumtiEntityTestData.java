@@ -1,5 +1,7 @@
 package com.kodekonveyor.repo.api;
 
+import java.util.List;
+
 public class SumtiEntityTestData {
 
   public static final String ELEMENT_ID = "elementId";
@@ -8,5 +10,13 @@ public class SumtiEntityTestData {
   public static final Long ID = 14L;
   public static final String NAME = "repo-server";
   public static final String TAG = "master";
+
+  public static List<SumtiEntity> list() {
+
+    final SumtiEntity sumtiEntity = new SumtiEntity();
+    sumtiEntity.setId(ID);
+
+    return List.of(sumtiEntity);
+  }
 
 }
