@@ -1,8 +1,8 @@
 package com.kodekonveyor.repo.api;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,6 +24,22 @@ import com.kodekonveyor.annotations.TestedService;
 public class ReadSumtiControllerElementLookupTest
     extends ReadSumtiControllerTestBase {
 
+  @BeforeEach
+  public void setUp() {
+    Mockito
+        .when(sumtiEntityRepository.findByLerpoiName(SumtiEntityTestData.NAME))
+        .thenReturn(SumtiEntityTestData.list());
+
+    Mockito
+        .when(
+            sumtiEntityRepository
+                .findByLerpoiName(
+                    SumtiEntityTestData.WRONG_NAME
+                )
+        )
+        .thenReturn(null);
+  }
+
   @Test
   @DisplayName("Looks up the repository by name")
   public void test1() {
@@ -44,32 +60,12 @@ public class ReadSumtiControllerElementLookupTest
   )
   public void test2() {
 
-    Mockito
-        .when(sumtiEntityRepository.findByLerpoiName(SumtiEntityTestData.NAME))
-        .thenReturn(SumtiEntityTestData.list());
-
-    final SumtiListDTO sumtiDTO = readSumtiController.call(
+    final SumtiDTO sumtiDTO = readSumtiController.call(
         SumtiEntityTestData.NAME, null,
         SumtiEntityTestData.ID
     );
 
-    assertEquals(SumtiDTOTestData.list(), sumtiDTO);
-
-  }
-
-  @Test
-  @DisplayName("Looks up the repository by name and tag")
-  public void test3() {
-
-    readSumtiController.call(
-        SumtiEntityTestData.NAME, SumtiEntityTestData.TAG,
-        SumtiEntityTestData.ID
-    );
-
-    Mockito.verify(sumtiEntityRepository)
-        .findByLerpoiNameAndTag(
-            SumtiEntityTestData.NAME, SumtiEntityTestData.TAG
-        );
+    assertEquals(SumtiDTOTestData.get().getUuid(), sumtiDTO.getUuid());
 
   }
 
@@ -77,23 +73,14 @@ public class ReadSumtiControllerElementLookupTest
   @DisplayName(
     "Looks up the repository by name and tag and checks the sumti is correct"
   )
-  public void test4() {
+  public void test3() {
 
-    Mockito
-        .when(
-            sumtiEntityRepository
-                .findByLerpoiNameAndTag(
-                    SumtiEntityTestData.NAME, SumtiEntityTestData.TAG
-                )
-        )
-        .thenReturn(SumtiEntityTestData.list());
-
-    final SumtiListDTO sumtiDTO = readSumtiController.call(
+    final SumtiDTO sumtiDTO = readSumtiController.call(
         SumtiEntityTestData.NAME, SumtiEntityTestData.TAG,
         SumtiEntityTestData.ID
     );
 
-    assertEquals(SumtiDTOTestData.list(), sumtiDTO);
+    assertEquals(SumtiDTOTestData.get().getUuid(), sumtiDTO.getUuid());
 
   }
 
@@ -101,23 +88,29 @@ public class ReadSumtiControllerElementLookupTest
   @DisplayName(
     "When parameters are wrong list is empty"
   )
-  public void test5() {
+  public void test4() {
 
-    Mockito
-        .when(
-            sumtiEntityRepository
-                .findByLerpoiNameAndTag(
-                    SumtiEntityTestData.WRONG_NAME, SumtiEntityTestData.TAG
-                )
-        )
-        .thenReturn(SumtiEntityTestData.getEmptyList());
-
-    final SumtiListDTO sumtiDTO = readSumtiController.call(
+    final SumtiDTO sumtiDTO = readSumtiController.call(
         SumtiEntityTestData.WRONG_NAME, SumtiEntityTestData.TAG,
         SumtiEntityTestData.ID
     );
 
-    assertTrue(sumtiDTO.getSumtiDTOList().isEmpty());
+    assertEquals(null, sumtiDTO.getUuid());
+
+  }
+
+  @Test
+  @DisplayName(
+    "When tag is not present list is empty"
+  )
+  public void test5() {
+
+    final SumtiDTO sumtiDTO = readSumtiController.call(
+        SumtiEntityTestData.NAME, SumtiEntityTestData.WRONG_TAG,
+        SumtiEntityTestData.ID
+    );
+
+    assertEquals(null, sumtiDTO.getUuid());
 
   }
 

@@ -5,11 +5,13 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class SumtiDTO {
-
-  private List<BridiEntity> bridi;
+public class BridiDTO {
 
   private Long id;
+
+  private SumtiEntity selbri;
+
+  private List<SumtiEntity> sumti;
 
   private String uuid;
 

@@ -27,4 +27,6 @@ public class BridiEntity {
   @OrderColumn
   @OneToMany(fetch = FetchType.LAZY)
   private List<SumtiEntity> sumti;
+
+  private String uuid;
 }
